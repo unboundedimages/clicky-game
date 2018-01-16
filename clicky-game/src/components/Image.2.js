@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
 import { Col } from 'react-bootstrap';
-import imgUrls from './imgUrls.js';
 
 class Image extends Component {
     state = {
-        clicked: false,
-        imgUrls: false
+        clicked: false
     };
 
     handleClick = () => {
@@ -20,7 +18,6 @@ class Image extends Component {
             console.log(this.props);
             this.props.onRoundWin();
         }
-        // if (this.props.img === ){}
     }
 
     resetTruthy() {
@@ -37,7 +34,7 @@ class Image extends Component {
                     alt="img"
                     width="100"
                     height="100"
-                    onClick = { this.handleClick }
+                    onClick={this.handleClick}
                 />
             </Col>
         );

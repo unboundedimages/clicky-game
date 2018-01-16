@@ -5,6 +5,7 @@ import imgUrls from './components/imgUrls.js';
 import Image from './components/Image.js';
 import { Row, Grid } from 'react-bootstrap';
 import shuffle from 'shuffle-array';
+//import ImageList from './components/ImageList.js';
 
 class App extends Component {
   state = {
