@@ -59,7 +59,7 @@ class App extends Component {
             {this.state.images.map((url, i) => {
               return <Image
                 img={url}
-                key={i+1}
+                key={url}
                 onRoundWin={this.handleRoundWin}
                 onRoundLoss={this.handleRoundLoss}
               />;

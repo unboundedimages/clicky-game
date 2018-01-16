@@ -37,7 +37,8 @@ class Image extends Component {
                     alt="img"
                     width="100"
                     height="100"
-                    onClick = { this.handleClick }
+                    onClick={this.handleClick}
+                    /*added (()=> in class to make this a call back to see if it binds the clickhandler to the url*/
                 />
             </Col>
         );
