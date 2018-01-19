@@ -4,32 +4,29 @@ import imgUrls from './imgUrls.js';
 
 class Image extends Component {
     state = {
-        // clicked: false,
+        clicked: false,
         imgUrls: false
     };
 
     handleClick = () => {
-        if (this.state.imgUrls === true) {
+        if (this.state.clicked === true) {
             console.log("Clicked -------");
             alert("You Already Clicked Me, Start Over!!");
             this.props.onRoundLoss();
             this.resetTruthy();
         }
         else {
-            this.setState({ imgUrls: true });
+            this.setState({ clicked: true });
             console.log(this.props);
             this.props.onRoundWin();
             this.resetTruthy();
         }
         // if (this.props.img === ){}
-        if (this.props.points === 0) {
-            this.setState.bind({ imgUrls: false });
-        }
     }
 
     resetTruthy() {
-        if (this.state.imgUrls === true) {
-            this.setState({ imgUrls: false });
+        if (this.state.clicked === true) {
+            this.setState({ clicked: false });
         }
     }
 

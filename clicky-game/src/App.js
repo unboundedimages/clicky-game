@@ -18,6 +18,7 @@ class App extends Component {
     this.shuffleImages();
     this.setState({ handleRoundLoss: this.state.points });
 
+
   };
 
   handleRoundLoss = () => {
@@ -26,7 +27,7 @@ class App extends Component {
     }
 
     this.setState({ points: 0 });
-
+// I have to tell the game that when points:0 clicked: false.
     this.shuffleImages();
   };
 
@@ -56,12 +57,14 @@ class App extends Component {
         <div>high score:{this.state.highScore}</div>
         <Grid>
           <Row>
-            {this.state.images.map((url, i) => {
+            {this.state.images.map((url) => {
               return <Image
                 img={url}
                 key={url}
                 onRoundWin={this.handleRoundWin}
                 onRoundLoss={this.handleRoundLoss}
+                // reset={this.props.resetTruthy}
+                eventPreventDefault
               />;
             })}
           </Row>
